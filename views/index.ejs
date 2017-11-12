@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home | <%= title %></title>
+    <link rel='stylesheet' href='/public/stylesheets/style.css'/>
+</head>
+<body>
+<% include nav.ejs %>
+<br>
+<div class="card-row">
+    <div id="other" class="page1-card">
+        <h2 class="language-name">Others</h2>
+        <p class="colorbbb"><strong>Repositories:</strong> <%= nolanguagerepo %></p>
+        <div class="card-button">
+            <a href="/Others"><strong class="colorF63E7D">EXPLORE</strong></a>
+        </div>
+    </div>
+</div>
+<br>
+<% for(let i = 0; i < languages.length - 1; i += 4){ %>
+<div class="card-row">
+    <div id="card<%= i + 1 %>" class="page1-card page1-card1">
+        <h2 class="language-name"><%= languages[i].name %></h2>
+        <p class="colorbbb"><strong>Repositories:</strong> <%= languages[i].repo %></p>
+        <div class="card-button">
+            <a href="/<%= languages[i].name %>"><strong class="colorF63E7D">EXPLORE</strong></a>
+        </div>
+    </div>
+    <div id="card<%= i + 2 %>" class="page1-card page1-card2">
+        <h2 class="language-name"><%= languages[i + 1].name %></h2>
+        <p class="colorbbb"><strong>Repositories:</strong> <%= languages[i + 1].repo %></p>
+        <div class="card-button">
+            <a href="/<%= languages[i + 1].name %>"><strong class="colorF63E7D">EXPLORE</strong></a>
+        </div>
+    </div>
+    <div id="card<%= i + 3 %>" class="page1-card page1-card3">
+        <h2 class="language-name"><%= languages[i + 2].name %></h2>
+        <p class="colorbbb"><strong>Repositories:</strong> <%= languages[i + 2].repo %></p>
+        <div class="card-button">
+            <a href="/<%= languages[i + 2].name %>"><strong class="colorF63E7D">EXPLORE</strong></a>
+        </div>
+    </div>
+    <div id="card<%= i + 4 %>" class="page1-card page1-card4">
+        <h2 class="language-name"><%= languages[i + 3].name %></h2>
+        <p class="colorbbb"><strong>Repositories:</strong> <%= languages[i + 3].repo %></p>
+        <div class="card-button">
+            <a href="/<%= languages[i + 3].name %>"><strong class="colorF63E7D">EXPLORE</strong></a>
+        </div>
+    </div>
+</div>
+<br>
+<% } %>
+
+<div><p id="end"></p></div>
+</body>
+<script src="/public/javascripts/index.js"></script>
+</html>

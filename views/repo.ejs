@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title><%= title %> | TechScan</title>
+    <link rel='stylesheet' href='/public/stylesheets/style.css'/>
+</head>
+<body>
+<% include nav.ejs %>
+<br><br><br><br><br><br>
+<h1 id="repo-heading"><%= title %></h1>
+<div class="hr-div">
+    <hr class="circular-hr">
+</div>
+<% if(title == 'Others'){ %>
+<% for(let i = 0; i < nonlanguagerepo.length - 1; i += 2){ %>
+<div class="card-row1 card-row2">
+    <div class="page2-card1">
+        <h2 class="language-name"><%= nonlanguagerepo[i].full_name %></h2>
+        <div class="card-button">
+            <a href="<%= nonlanguagerepo[i].url %>"><strong class="colorF63E7D">EXPLORE</strong></a>
+        </div>
+    </div>
+    <div class="page2-card1">
+        <h2 class="language-name"><%= nonlanguagerepo[i + 1].full_name %></h2>
+        <div class="card-button">
+            <a href="<%= nonlanguagerepo[i + 1].url %>"><strong class="colorF63E7D">EXPLORE</strong></a>
+        </div>
+    </div>
+    <br>
+</div>
+<br>
+<% } %>
+<% }else{ %>
+<div id="margin">
+    <% for(let i = 0; i < repo.length - 1; i += 2){ %>
+    <div class="card-row1">
+        <div class="page2-card">
+            <h2 class="language-name"><%= repo[i].full_name %></h2>
+            <p class="color666"><strong>Type:</strong><%= repo[i].type %></p>
+            <p class="colorbbb"><strong>Issues:</strong><%= repo[i].open_issues %></p>
+            <div class="card-button" style="margin-bottom: 10px">
+                <a href="<%= repo[i].url %>"><strong class="colorF63E7D">EXPLORE</strong></a>
+            </div>
+            <div style="height: 20px"></div>
+        </div>
+        <div class="page2-card">
+            <h2 class="language-name"><%= repo[i + 1].full_name %></h2>
+            <p class="color666"><strong>Type:</strong><%= repo[i + 1].type %></p>
+            <p class="colorbbb"><strong>Issues:</strong><%= repo[i + 1].open_issues %></p>
+            <div class="card-button">
+                <a href="<%= repo[i + 1].url %>"><strong class="colorF63E7D">EXPLORE</strong></a>
+            </div>
+        </div>
+        <br>
+    </div>
+    <br>
+</div>
+<% } %>
+<% } %>
+<div><p id="end"></p></div>
+<script src="/public/javascripts/index.js"></script>
+</body>
+</html>

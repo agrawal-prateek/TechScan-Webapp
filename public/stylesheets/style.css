@@ -1,0 +1,229 @@
+*, html {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    src: url('/public/font/FuturaBT_Light.otf');
+    font-family: futura light;
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/public/stylesheets/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2') format('woff2');
+}
+
+.material-icons {
+    font-family: Material Icons;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background: #e1e2e2;
+    font-family: "futura light", "Lucida Grande", "Helvetica", Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    background: #3d0b96;
+    top: 0;
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
+}
+
+#techscan {
+    color: white;
+    font-size: 40px;
+    margin-top: 15%;
+}
+
+nav ul li {
+    margin-left: 2%;
+}
+
+.inline-list {
+    float: left;
+    display: inline-block;
+}
+
+.width-greater {
+    width: 100%;
+}
+
+.colorbbb {
+    color: #bbb;
+}
+
+.colorF63E7D {
+    color: #F63E7D;
+}
+
+.card-button {
+    cursor: pointer;
+    float: right;
+    margin-right: 5%;
+}
+
+.card-button a {
+    padding: 5px 10px;
+    transition: background 500ms;
+}
+
+.card-button a:hover {
+    background: #e1e2e2;
+    border-radius: 6%;
+}
+
+.page1-card {
+    background: #fff;
+    float: left;
+    height: 100px;
+    width: 23%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    margin-left: 1%;
+    position: inherit;
+    top: 10px;
+    transition: box-shadow 500ms;
+}
+.page2-card {
+    background: #fff;
+    float: left;
+    height: 140px;
+    width: 47%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    margin-left: 1%;
+    position: inherit;
+    top: 10px;
+    transition: box-shadow 500ms;
+}
+
+.page2-card1 {
+    background: #fff;
+    float: left;
+    height: 80px;
+    width: 47%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    margin-left: 1%;
+    position: inherit;
+    top: 10px;
+    transition: box-shadow 500ms;
+}
+
+.page1-card h2,
+.page2-card h2 ,
+.page2-card1 h2 {
+    margin-left: 3%;
+    margin-top: 1%;
+    padding-top: 2%;
+}
+
+.page1-card p,
+.page2-card p{
+    margin-left: 3%;
+    padding-top: 2%;
+}
+
+.page1-card h2,
+.page1-card p,
+.page2-card h2,
+.page2-card p,
+.page2-card1 h2 {
+    cursor: default;
+}
+
+.page1-card:hover,
+.page2-card:hover,
+.page2-card1:hover{
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card-row {
+    margin-top: 100px;
+    margin-left: 2%;
+}
+.card-row1 {
+    margin-top: 120px;
+    margin-left: 2%;
+}
+.card-row2{
+    margin-top: 50px;
+    margin-left: 2%;
+}
+
+/*.page1-card1 {*/
+    /*margin-left: 2%;*/
+/*}*/
+
+/*.page1-card2, .page1-card3, .page1-card4 {*/
+    /*margin-left: 1%;*/
+/*}*/
+
+#end {
+    cursor: default;
+    visibility: hidden;
+    height: 20px
+}
+#search-box {
+    float: left;
+    border: none;
+    margin-left: 80%;
+    margin-top: -2.5%;
+    height: 25px;
+    border-bottom-right-radius: 70px;
+    border-top-right-radius: 70px;
+    outline: none;
+    padding-left: 5px;
+    width: 110px;
+    transition: width 500ms;
+}
+#search-box:hover,
+#search-box:focus{
+    width: 200px;
+}
+nav ul{
+    width: 100%!important;
+}
+#repo-heading{
+    margin-left: 15px;
+    color: #aaa;
+}
+.hr-div{
+    text-align: center;
+}
+.circular-hr{
+    border: transparent;
+    background: #aaa;
+    height: 5px;
+    border-radius: 50%;
+    width: 97%;
+    margin-top: 20px;
+    display: inline-block;
+}
+.color666{
+    color: #666;
+}
+#margin{
+    margin-top: -70px;
+}
+#techscan strong a{
+    text-decoration: none;
+    color: white;
+}
